@@ -6,12 +6,13 @@ body {
     line-height: 1.6;
     background-color: #e0f7fa; /* Azul claro */
     transition: background-color 0.3s ease;
+    color: #000; /* Texto em preto */
 }
 
 /* Estilizando o cabeçalho */
 header {
     background-color: #0288d1; /* Azul mais forte */
-    color: #fff;
+    color: #000; /* Preto no texto do cabeçalho */
     padding: 20px 0;
     text-align: center;
     position: fixed;
@@ -41,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000; /* Texto preto nos links de navegação */
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -50,7 +51,7 @@ nav ul li a {
 
 /* Efeito de hover nos links de navegação */
 nav ul li a:hover {
-    color: #81d4fa; /* Azul claro para destaque */
+    color: #0288d1; /* Azul para destaque */
 }
 
 /* Garantindo que o conteúdo tenha espaçamento suficiente para o menu fixo */
@@ -77,18 +78,50 @@ main {
     transform: translateY(0);
 }
 
-/* Imagens nas seções de conteúdo */
-.content-section img {
-    max-width: 100%;
+/* Estilizando o carrossel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
     border-radius: 8px;
+}
+
+/* Botões de navegação do carrossel */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Botões escuros */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
 }
 
 /* Estilizando o rodapé */
 footer {
-    background-color: #01579b; /* Azul escuro */
-    color: #fff;
+    background-color: #0288d1; /* Azul mais forte */
+    color: #000; /* Texto preto no rodapé */
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
